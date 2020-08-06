@@ -7,7 +7,7 @@ import com.djx.threadPool.task.Task;
 import java.util.Random;
 
 /**
- * 测试线程池
+ * 测试 线程池是否能正常工作
  */
 public class TestThreadPool {
 

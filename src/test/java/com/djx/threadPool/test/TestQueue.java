@@ -3,8 +3,10 @@ package com.djx.threadPool.test;
 import com.djx.threadPool.exception.MyQueueSIzeIsZeroException;
 import com.djx.threadPool.task.MyQueue;
 import com.djx.threadPool.task.Task;
-import com.sun.org.apache.bcel.internal.generic.ACONST_NULL;
 
+/**
+ * 测试队列是否有并发问题
+ */
 public class TestQueue {
 
     public static void main(String[] args) throws InterruptedException {
@@ -25,6 +27,7 @@ public class TestQueue {
         final MyQueue<Task> queue1 = queue;
         for (int i=0;i<10;i++){
             new Thread(new Runnable() {
+                @Override
                 public void run() {
                     while (true) {
                         if (queue1.isEmpty()) {
